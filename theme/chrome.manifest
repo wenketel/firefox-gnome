@@ -1,5 +1,8 @@
 skin    browser         Adwaita     chrome/browser/
+skin    browser         Adwaita     chrome/browser-29/ appversion>=29a1
+
 skin    global          Adwaita     chrome/global/
+skin    global          Adwaita     chrome/global-29/ appversion>=29a1
 
 skin    symbolic-icons     Adwaita    chrome/symbolic-icons/
 skin    adwaita-mozapps    Adwaita    chrome/mozapps/
