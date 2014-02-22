@@ -546,20 +546,18 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
 }
 
 /* Primary toolbar buttons */
-/*
-.toolbarbutton-1 > .toolbarbutton-icon {
-  -moz-margin-end: 0;
+
+/* ... */
+
+/* Help SDK icons fit: */
+toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
+  width: 16px;
 }
 
-.toolbarbutton-1:not([type="menu-button"]),
-.toolbarbutton-1 > .toolbarbutton-menubutton-button {
-  padding: 5px;
+:-moz-any(#TabsToolbar, #nav-bar) toolbarbutton[sdk-button="true"][cui-areatype="toolbar"] > .toolbarbutton-icon {
+  /* XXXgijs box models strike again: this is 16px + 2 * 7px padding + 2 * 1px border (from the rules above) */
+  width: 32px;
 }
-
-.toolbarbutton-1[checked="true"] {
-  padding: 5px !important;
-}
-*/
 
 #forward-button[disabled] {
   transform: scale(0);
@@ -1068,9 +1066,6 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
 
 .urlbar-input-box {
   -moz-margin-start: 0;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  min-width: 4em;
 }
 
 #urlbar-container {
@@ -3096,7 +3091,8 @@ html|*#gcli-output-frame {
 }
 
 .click-to-play-plugins-notification-button-container {
-  background: linear-gradient(rgba(0,0,0,0.04) 60%, transparent);
+  background-color: hsla(210,4%,10%,.07);
+  border-top: 1px solid hsla(210,4%,10%,.12);
   padding: 10px;
   margin-top: 5px;
 }
@@ -3163,6 +3159,10 @@ notification.pluginVulnerable .messageImage {
 #downloads-button[cui-areatype="toolbar"] > #downloads-indicator-anchor > #downloads-indicator-icon {
   background: -moz-image-rect(url(chrome://symbolic-icons/skin/download.svg),
                               0, 16, 16, 0) center no-repeat;
+  /* Is it needed?
+  min-width: 18px;
+  min-height: 18px;
+  */
 }
 
 #downloads-button[cui-areatype="toolbar"][attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
@@ -3798,9 +3798,7 @@ chatbox {
 }
 
 #customization-undo-reset {
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 7px;
+  -moz-margin-end: 10px;
 }
 
 #main-window[customize-entered] #customization-panel-container {
