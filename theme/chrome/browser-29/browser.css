@@ -1044,6 +1044,8 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
   margin: 0px 3px;
   min-height: 28px;
   overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
   transition-property: border, box-shadow;
   transition-duration: 200ms;
 }
@@ -1142,11 +1144,6 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #back
 .urlbar-icon {
   height: 26px;
   padding: 5px;
-  min-width: 26px;
-}
-
-#urlbar-icons > :-moz-any(box, image, menupopup)[hidden="true"] {
-  visibility: collapse;
 }
 
 #urlbar-search-splitter {
@@ -1560,6 +1557,7 @@ window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #back
   border-color: #fff;
   border-image: url(chrome://browser/skin/urlbar-arrow.svg) 0 8 0 0 fill;
   -moz-margin-end: 0;
+  z-index: 1;
 }
 
 #identity-box {
