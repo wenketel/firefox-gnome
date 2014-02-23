@@ -17,5 +17,7 @@ style  chrome://browser/content/browser.xul                chrome://browser/skin
 
 style  about:addons                                        chrome://adwaita-mozapps/skin/extensions/extensions.css
 style  chrome://mozapps/content/extensions/extensions.xul  chrome://adwaita-mozapps/skin/extensions/extensions.css
+style  about:addons                                        chrome://adwaita-mozapps/skin/extensions/extensions-29.css appversion>=29a1
+style  chrome://mozapps/content/extensions/extensions.xul  chrome://adwaita-mozapps/skin/extensions/extensions-29.css appversion>=29a1
 
 style  chrome://mozapps/content/downloads/downloads.xul    chrome://adwaita-mozapps/skin/downloads/downloads.css
