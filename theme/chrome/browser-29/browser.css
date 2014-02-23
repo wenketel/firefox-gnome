@@ -118,10 +118,10 @@ toolbarpaletteitem[place="palette"] > #personal-bookmarks > #bookmarks-toolbar-p
 /* ----- BOOKMARK STAR ANIMATION ----- */
 
 @keyframes animation-bookmarkAdded {
-  from { transform: rotate(0deg) translateX(-20px) rotate(0deg) scale(1); opacity: 0; }
-  60%  { transform: rotate(180deg) translateX(-20px) rotate(-180deg) scale(2.2); opacity: 1; }
+  from { transform: rotate(0deg) translateX(-14px) rotate(0deg) scale(1); opacity: 0; }
+  60%  { transform: rotate(180deg) translateX(-14px) rotate(-180deg) scale(2.2); opacity: 1; }
   80%  { opacity: 1; }
-  to   { transform: rotate(180deg) translateX(-20px) rotate(-180deg) scale(1); opacity: 0; }
+  to   { transform: rotate(180deg) translateX(-14px) rotate(-180deg) scale(1); opacity: 0; }
 }
 
 @keyframes animation-bookmarkAddedToBookmarksBar {
@@ -693,7 +693,7 @@ window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #
 }
 
 #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/view-more.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/view-more-bookmarks.svg);
 }
 
 #history-panelmenu[cui-areatype="toolbar"] {
@@ -1914,12 +1914,28 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 /* bookmarks menu-button */
 
+#bookmarks-menu-button {
+  min-width: 52px !important;
+}
+
+#nav-bar[reliefbuttons="true"] #bookmarks-menu-button {
+  min-width: 64px !important;
+}
+
 #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker {
   -moz-appearance: none !important;
+  -moz-padding-end: 3px;
+  -moz-padding-start: 3px;
+}
+
+#nav-bar[reliefbuttons="true"] #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker {
+  -moz-padding-end: 6px;
+  -moz-padding-start: 6px;
+  -moz-margin-start: 0;
 }
 
 #bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
-  list-style-image: url(chrome://symbolic-icons/skin/dropmarker.svg);
+  list-style-image: url(chrome://symbolic-icons/skin/view-more-bookmarks.svg);
 }
 
 #bookmarks-menu-button.bookmark-item {
