@@ -2105,6 +2105,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #TabsToolbar toolbarbutton {
+  -moz-appearance: none;
   margin-bottom: 2px;
 }
 
@@ -2334,6 +2335,7 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 /* In-tab close button */
 #TabsToolbar .tab-close-button {
+  -moz-appearance: none;
   list-style-image: url(chrome://symbolic-icons/skin/close.svg);
   margin: 1px 0;
   -moz-margin-end: -3px;
