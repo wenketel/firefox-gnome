@@ -82,13 +82,23 @@ var Tweaks = {
 
         _setAttributes: function(window) {
             if (!window) return;
-            var toolbaritem = window.document.getElementById("unified-back-forward-button");
+
+            var ai = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULAppInfo);
+            var vc = Cc["@mozilla.org/xpcom/version-comparator;1"].getService(Ci.nsIVersionComparator);
+            var element_id = vc.compare(ai.version, "29.0a1") >= 0 ? "urlbar-container" : "unified-back-forward-button";
+
+            var toolbaritem = window.document.getElementById(element_id);
             toolbaritem && toolbaritem.setAttribute("forwardshowalways", true);
         },
 
         _removeAttributes: function(window) {
             if (!window) return;
-            var toolbaritem = window.document.getElementById("unified-back-forward-button");
+
+            var ai = Cc["@mozilla.org/xre/app-info;1"].getService(Ci.nsIXULAppInfo);
+            var vc = Cc["@mozilla.org/xpcom/version-comparator;1"].getService(Ci.nsIVersionComparator);
+            var element_id = vc.compare(ai.version, "29.0a1") >= 0 ? "urlbar-container" : "unified-back-forward-button";
+
+            var toolbaritem = window.document.getElementById(element_id);
             toolbaritem && toolbaritem.removeAttribute("forwardshowalways");
         },
     },

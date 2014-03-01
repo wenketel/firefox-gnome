@@ -1088,10 +1088,10 @@ window:not([chromehidden~="toolbar"]) #urlbar-container:not([switchingtabs]) > #
               margin-right 200ms ease-out;
 }
 
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
+window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #urlbar-wrapper > #urlbar:-moz-locale-dir(ltr) {
   margin-left: -28px;
 }
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
+window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #urlbar-wrapper > #urlbar:-moz-locale-dir(rtl) {
   margin-right: -28px;
 }
 
@@ -1104,35 +1104,35 @@ window:not([chromehidden~="toolbar"]) #urlbar-container > #forward-button {
               background 200ms ease;
 }
 
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #forward-button {
+window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #forward-button {
   opacity: 0 !important;
   pointer-events: none;
   visibility: hidden;
 }
 
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #back-button {
+window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #back-button {
   -moz-border-end-width: 1px !important;
 }
 
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #back-button:not([open="true"]) {
+window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #back-button:not([open="true"]) {
   border-radius: 3px !important;
 }
 
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #back-button:not(:active):not([disabled="true"]):not([open="true"]) {
+window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #back-button:not(:active):not([disabled="true"]):not([open="true"]) {
   box-shadow: 0 1px 0 rgba(255,255,255,0.37),
               inset 0 1px 0 rgba(255,255,255,0.45),
               inset 1px 0 0 rgba(255,255,255,0.3),
               inset -1px 0 0 rgba(255,255,255,0.3) !important;
 }
 
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #back-button:not(:active):not([disabled="true"]):not([open="true"]):-moz-lwtheme {
+window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #back-button:not(:active):not([disabled="true"]):not([open="true"]):-moz-lwtheme {
   box-shadow: 0 1px 0 rgba(255,255,255,0.15),
               inset 0 1px 0 rgba(255,255,255,0.3),
               inset 1px 0 0 rgba(255,255,255,0.2),
               inset -1px 0 0 rgba(255,255,255,0.2) !important;
 }
 
-window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled] > #back-button[disabled="true"] {
+window:not([chromehidden~="toolbar"]) #urlbar-container[forwarddisabled]:not([forwardshowalways]) > #back-button[disabled="true"] {
   box-shadow: none !important;
 }
 
