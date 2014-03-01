@@ -1971,6 +1971,11 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   margin-bottom: -16px;
 }
 
+#nav-bar .toolbarbutton-1 > menupopup[side="top"].cui-widget-panel,
+#nav-bar .toolbarbutton-1 > menupopup[side="bottom"].cui-widget-panel {
+  margin-top: -4px;
+}
+
 /* Bookmarking panel */
 #editBookmarkPanelStarIcon {
   list-style-image: url("chrome://browser/skin/places/starred48.png");
@@ -3793,6 +3798,10 @@ chatbox {
   -moz-appearance: none;
 }
 
+.customizationmode-button[disabled="true"] {
+  opacity: .5;
+}
+
 #customization-titlebar-visibility-button {
   list-style-image: url("chrome://browser/skin/customizableui/customize-titleBar-toggle.png");
   -moz-image-region: rect(0, 24px, 24px, 0);
@@ -3814,7 +3823,7 @@ chatbox {
               inset 0 1px rgb(196, 196, 196);
 }
 
-#customization-undo-reset {
+#customization-undo-reset-button {
   -moz-margin-end: 10px;
 }
 
