@@ -158,7 +158,7 @@ toolbarpaletteitem[place="palette"] > #personal-bookmarks > #bookmarks-toolbar-p
 #bookmarked-notification-anchor[notification="finish"] > #bookmarked-notification {
   background-image: url("chrome://browser/skin/places/bookmarks-notification-finish.png");
   animation: animation-bookmarkAdded 800ms;
-  animation-timing-function: ease ease ease linear;
+  animation-timing-function: ease, ease, ease;
 }
 
 #bookmarked-notification-anchor[notification="finish"][in-bookmarks-toolbar=true] > #bookmarked-notification {
@@ -965,7 +965,7 @@ toolbarpaletteitem[place="palette"] > #zoom-controls > #zoom-in-button {
 #main-window:not([customizing]) .toolbarbutton-1[disabled=true] > .toolbarbutton-menu-dropmarker,
 #main-window:not([customizing]) .toolbarbutton-1[disabled=true] > .toolbarbutton-menubutton-dropmarker,
 #main-window:not([customizing]) .toolbarbutton-1[disabled=true] > .toolbarbutton-menubutton-button > .toolbarbutton-icon,
-#main-window:not([customizing]) .toolbarbutton-1 > .toolbarbutton-menubutton-button[disabled] > .toolbarbutton-icon {
+#main-window:not([customizing]) .toolbarbutton-1 > .toolbarbutton-menubutton-button[disabled=true] > .toolbarbutton-icon {
   opacity: 0.4;
 }
 
@@ -2319,6 +2319,9 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 }
 
 #tabbrowser-tabs {
+  /*
+  min-height: 31px;
+  */
   /* override the global style to allow the selected tab to be above the nav-bar */
   z-index: auto;
 }
@@ -3723,7 +3726,7 @@ chatbox {
   margin: 0 2em 2em;
 }
 
-#main-window:-moz-any([customize-entering],[customize-entered]) #navigator-toolbox > toolbar {
+#main-window:-moz-any([customize-entering],[customize-entered]) #navigator-toolbox {
   margin-left: 2em;
   margin-right: 2em;
 }
@@ -3956,11 +3959,6 @@ toolbarpaletteitem[place="toolbar"] {
   background-clip: padding-box;
   border-right: 3px solid transparent;
   border-left: 3px solid transparent;
-}
-
-#main-window[customizing] #navigator-toolbox::after {
-  margin-left: 2em;
-  margin-right: 2em;
 }
 
 /* End customization mode */
