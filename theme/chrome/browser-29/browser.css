@@ -1961,14 +1961,14 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
 
 #BMB_bookmarksPopup[side="top"],
 #BMB_bookmarksPopup[side="bottom"] {
-  margin-left: -16px;
-  margin-right: -16px;
+  margin-left: -30px;
+  margin-right: -30px;
 }
 
 #BMB_bookmarksPopup[side="left"],
 #BMB_bookmarksPopup[side="right"] {
-  margin-top: -16px;
-  margin-bottom: -16px;
+  margin-top: -30px;
+  margin-bottom: -30px;
 }
 
 #nav-bar .toolbarbutton-1 > menupopup[side="top"].cui-widget-panel,
