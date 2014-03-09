@@ -36,7 +36,9 @@
 }
 
 /* Toolbars */
-#main-window:not([customizing]) #toolbar-menubar:not([autohide="true"]) {
+#main-window:not([customizing]) #toolbar-menubar:not([autohide="true"]),
+#main-window:not([customizing]) #TabsToolbar:not([tabsonbottom="true"]),
+#main-window:not([customizing]) #nav-bar[tabsonbottom="true"] {
   -moz-binding: url(chrome://global/content/bindings/toolbar.xml#toolbar-drag);
 }
 
@@ -2140,10 +2142,12 @@ richlistitem[selected="true"][type~="action"][actiontype="switchtab"] > .ac-url-
   bottom: 0;
 }
 
+/*
 #toolbar-menubar:not([autohide="true"]):not(:-moz-lwtheme):-moz-system-metric(menubar-drag),
 #TabsToolbar:not(:-moz-lwtheme):-moz-system-metric(menubar-drag) {
   -moz-binding: url("chrome://browser/content/customizableui/toolbar.xml#toolbar-drag");
 }
+*/
 
 #TabsToolbar toolbarbutton {
   -moz-appearance: none;
