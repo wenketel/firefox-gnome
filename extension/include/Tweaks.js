@@ -77,7 +77,7 @@ var Tweaks = {
             var e = ["navigator-toolbox", "nav-bar", "TabsToolbar"];
             for (var i=0; i < e.length; i++) {
                 var item = window.document.getElementById(e[i]);
-                item && item.setAttribute("tabsonbottom", true);
+                item && item.setAttribute("tabsontop", false);
             }
         },
 
@@ -86,7 +86,7 @@ var Tweaks = {
             var e = ["navigator-toolbox", "nav-bar", "TabsToolbar"];
             for (var i=0; i < e.length; i++) {
                 var item = window.document.getElementById(e[i]);
-                item && item.removeAttribute("tabsonbottom");
+                item && item.removeAttribute("tabsontop");
             }
         },
     },
